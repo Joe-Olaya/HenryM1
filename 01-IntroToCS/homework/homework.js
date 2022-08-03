@@ -1,7 +1,7 @@
 'use strict'
 function BinarioADecimal(num) {
   // tu codigo aca
-  let nuevoNum = num.split('').reverse().join('');
+  let nuevoNum = num.toString().split('').reverse().join('');
   let suma = 0;
   for (let i = 0; i < nuevoNum.length; i++ ){
     if (nuevoNum.charAt(i) == 1){
@@ -9,7 +9,6 @@ function BinarioADecimal(num) {
     }
   }
   return suma
- 
 }
 
 function DecimalABinario(num) {
