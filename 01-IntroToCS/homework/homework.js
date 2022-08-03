@@ -19,7 +19,6 @@ function DecimalABinario(num) {
     num = Math.floor(num/2);
   }
   return binario.split('').reverse().join('');
-
 }
 
 
