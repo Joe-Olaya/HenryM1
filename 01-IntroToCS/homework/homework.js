@@ -1,10 +1,10 @@
 'use strict'
 function BinarioADecimal(num) {
   // tu codigo aca
-  var array = num.split('').reverse().join('');
-  var suma = 0;
-  for (let i = 0; i < array.length; i++ ){
-    if (array.charAt(i) == 1){
+  let nuevoNum = num.split('').reverse().join('');
+  let suma = 0;
+  for (let i = 0; i < nuevoNum.length; i++ ){
+    if (nuevoNum.charAt(i) == 1){
       suma += Math.pow(2,i);
     }
   }
@@ -14,8 +14,8 @@ function BinarioADecimal(num) {
 
 function DecimalABinario(num) {
   // tu codigo aca
-  var binario = '';
-  while (num != 0){
+  let binario = '';
+  while (num > 0){
     binario += (num%2).toString();
     num = Math.floor(num/2);
   }
