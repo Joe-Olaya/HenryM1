@@ -81,16 +81,17 @@ console.log(pm);//"Franco"
 "$" + 4 + 5 //$45
 "4" - 2 // 2
 "4px" - 2 // NaN
-7 / 0 // 1
-{}[0] // [0]
+7 / 0 // infinito
+{}[0] // undefined
 parseInt("09") // 9
 5 && 2 // 2
 2 && 5 // 5
 5 || 0 // 5
-0 || 5 // 0
-[3]+[3]-[10] // NaN
+0 || 5 // 5
+[3]+[3]-[10] // 23
 3>2>1 // Fasle
-[] == ![] // true
+[] == ![] // true un array vacio lo toma con un un objeto y le otorga un numero [] == 0 y el ![] == false  
+//0 == false no obstante 2 arrays vacios son distintos porque ocupan distinto espacio en la memoria
 ```
 
 > Si te quedó alguna duda repasá con [este artículo](http://javascript.info/tutorial/object-conversion).
