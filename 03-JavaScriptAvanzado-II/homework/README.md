@@ -18,9 +18,10 @@ Crear un método `repeatify` que este disponible para _todos_ los objetos `Strin
 ```javascript
 String.prototype.repeatify = function(numRepeat){
     var resultado = ''
-    for(i == 0; i < numRepeat; i++){
+    for(let i = 0; i < numRepeat; i++){
         resultado += this
     }
+    return resultado
 }
 console.log('hola'.repeatify(3));   //holaholahola
 ```
@@ -34,14 +35,26 @@ console.log('hola'.repeatify(3));   //holaholahola
 Probá tu solución con el siguiente código:
 
 ```javascript
-var shape = {
-    type : [],
-    getType : function(){},
+function Shape(type, getType) {
+  this.type = type;
+  this.getType = getType;
 }
-Triangle.prototype.shape = function(a,b,c){
-    var getPerimeter =function(){
-        return a + b + c
-    }
+
+function Triangle(a,b,c) {
+  this.lado1 =a;
+  this.lado2 =b;
+  this.lado3 =c;
+}
+
+Triangle.prototype = new Shape(
+  "Triangle", 
+  function(){return this.type;
+  });
+
+
+Triangle.prototype.getPerimeter = function() {
+  return this.lado1 + this.lado2 + this.lado3;
+}
 }
 > var t = new Triangle(1, 2, 3);
 > t instanceof Triangle
