@@ -15,7 +15,7 @@ Como ejercicio adicional y completamente opcional, al terminar de resolver este 
 */
 
 function nFactorial(n) {
-	if(n >= 2){
+	if(n > 2){
   return n * nFactorial(n-1)
   }
   return n
@@ -59,22 +59,48 @@ Implementar la clase Queue, sabiendo que es una estructura de tipo FIFO, donde e
 Pueden utilizar class o función constructora.
 */
 
-function Queue() {
-  this.valores = [];
-  this.enqueue = function(value){
-    this.valores.unshift(value)
+// function Queue() {
+//   this.valores = [];
+//   this.enqueue = function(value){
+//     this.valores.unshift(value)
+//   };
+//   this.dequeue = function(){
+//     if(this.valores.length != 0){
+//     return this.valores.pop()
+//     }
+//     return undefined
+//   };
+//   this.size = function (){
+//     return this.valores.length
+//   };
+// }
+
+// function Queue(){
+//   this.valores = [];
+// }
+// Queue.prototype.enqueue = function(value){
+//   this.valores.unshift(value);
+// };
+// Queue.prototype.dequeue = function(){
+//   return this.valores.pop();
+// };
+// Queue.prototype.size = function (){
+//   return this.valores.length;
+// };
+class Queue{
+  constructor(){
+    this.valores = [];
   };
-  this.dequeue = function(){
-    if(this.valores.length != 0){
-    return this.valores.pop()
-    }
-    return undefined
+  enqueue(value){
+    this.valores.unshift(value);
   };
-  this.size = function (){
-    return this.valores.length
+  dequeue(){
+    return this.valores.pop();
+  };
+  size(){
+    return this.valores.length;
   };
 }
-
 // No modifiquen nada debajo de esta linea
 // --------------------------------
 
